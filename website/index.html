@@ -1,46 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Ayomide Obadina</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ayomide Obadina — Cloud/DevOps Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
 </head>
-
 <body>
-<header>
-        <h1>Ayomide Obadina</h1>
-        <p>Cloud/Devops Engineer</p>
-</header>
 
-<section>
-    <h2>About Me</h2>
-    <p>I'm a Cloud/DevOps Engineer with a passion for automating and optimizing infrastructure that scales, performs, and endures. With experience across multiple cloud providers and tools, I specialize in delivering reliable solutions that empower teams to move faster and build with confidence.
-    Reliability isn't just a goal for me — it's a standard.</p>
-</section>
+  <!-- Custom cursor -->
+  <div class="cursor"></div>
+  <div class="cursor-trail"></div>
 
-<section>
-    <h2>Skills</h2>
-    <ul>
-        <li> Linux</li>
-        <li>AWS (S3, CloudFront, IAM)</li>
-        <li>Terraform</li>
-        <li>Git and Github</li>
-        <li>Docker</li>
-        <li>Kubernetes</li>
+  <!-- Noise overlay -->
+  <div class="noise"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">AO<span class="dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-</section>
+  </nav>
 
-<section>
-    <h2>Projects</h2>
-    <p>Cloud Portfolio Website</p>
-    <p>AWS Monitoring and Automation</p>
-</section>
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <p class="hero-tag mono reveal">&#60; Cloud/DevOps Engineer /&#62;</p>
+      <h1 class="hero-name reveal delay-1">Ayomide<br/><span class="outline-text">Obadina</span></h1>
+      <p class="hero-sub reveal delay-2">Automating infrastructure that <em>scales, performs,</em><br/>and endures — reliability is my standard.</p>
+      <a href="#projects" class="btn reveal delay-3">View My Work <span class="arrow">↓</span></a>
+    </div>
+    <div class="hero-badge reveal delay-3">
+      <span class="badge-ring"></span>
+      <span class="badge-text mono">Available for opportunities</span>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-<section>
-    <h2>Contact</h2>
-    <p>GitHub: <a href="https://github.com/ayo-d09">https://github.com/ayo-d09</a></p>
-    <p>Email: <a href="mailto:aobadina6@gmail.com">aobadina6@gmail.com</a></p>
-</section>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <span class="section-tag mono scroll-reveal">01 — about</span>
+      <div class="about-grid">
+        <div class="about-text scroll-reveal">
+          <h2>Crafting Infrastructure<br/><span class="accent">Built to Last</span></h2>
+          <p>I'm a Cloud/DevOps Engineer with a passion for automating and optimizing infrastructure that scales, performs, and endures. With experience across multiple cloud providers and tools, I specialize in delivering reliable solutions that empower teams to move faster and build with confidence.</p>
+          <p>Reliability isn't just a goal for me — it's a standard.</p>
+        </div>
+        <div class="about-stats scroll-reveal delay-1">
+          <div class="stat-card">
+            <span class="stat-num">6+</span>
+            <span class="stat-label mono">Core Tools</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">∞</span>
+            <span class="stat-label mono">Drive to Learn</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">100%</span>
+            <span class="stat-label mono">Reliability Focus</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <span class="section-tag mono scroll-reveal">02 — skills</span>
+      <h2 class="section-title scroll-reveal">Tech Stack</h2>
+      <div class="skills-grid">
+        <div class="skill-card scroll-reveal" style="--i:0">
+          <div class="skill-icon">🐧</div>
+          <span class="skill-name">Linux</span>
+          <div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div>
+        </div>
+        <div class="skill-card scroll-reveal" style="--i:1">
+          <div class="skill-icon">☁️</div>
+          <span class="skill-name">AWS (S3, CloudFront, IAM)</span>
+          <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
+        </div>
+        <div class="skill-card scroll-reveal" style="--i:2">
+          <div class="skill-icon">🏗️</div>
+          <span class="skill-name">Terraform</span>
+          <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+        </div>
+        <div class="skill-card scroll-reveal" style="--i:3">
+          <div class="skill-icon">🐙</div>
+          <span class="skill-name">Git & GitHub</span>
+          <div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
+        </div>
+        <div class="skill-card scroll-reveal" style="--i:4">
+          <div class="skill-icon">🐳</div>
+          <span class="skill-name">Docker</span>
+          <div class="skill-bar"><div class="skill-fill" style="--w:82%"></div></div>
+        </div>
+        <div class="skill-card scroll-reveal" style="--i:5">
+          <div class="skill-icon">⚙️</div>
+          <span class="skill-name">Kubernetes</span>
+          <div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <span class="section-tag mono scroll-reveal">03 — projects</span>
+      <h2 class="section-title scroll-reveal">Selected Work</h2>
+      <div class="projects-grid">
+        <div class="project-card scroll-reveal">
+          <div class="project-number mono">01</div>
+          <h3>Cloud Portfolio Website</h3>
+          <p>Designed and deployed a personal portfolio hosted on AWS with S3 static hosting and CloudFront CDN for fast, global delivery.</p>
+          <div class="project-tags">
+            <span class="tag mono">AWS S3</span>
+            <span class="tag mono">CloudFront</span>
+            <span class="tag mono">IAM</span>
+          </div>
+          <a href="#" class="project-link mono">View Project →</a>
+        </div>
+        <div class="project-card scroll-reveal delay-1">
+          <div class="project-number mono">02</div>
+          <h3>AWS Monitoring & Automation</h3>
+          <p>Built automated monitoring pipelines using AWS CloudWatch and Lambda to track infrastructure health and trigger alerts proactively.</p>
+          <div class="project-tags">
+            <span class="tag mono">CloudWatch</span>
+            <span class="tag mono">Lambda</span>
+            <span class="tag mono">Terraform</span>
+          </div>
+          <a href="#" class="project-link mono">View Project →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <span class="section-tag mono scroll-reveal">04 — contact</span>
+      <div class="contact-inner scroll-reveal">
+        <h2>Let's Build<br/><span class="accent">Something Great</span></h2>
+        <p class="contact-sub">Open to new opportunities, collaborations, and conversations.</p>
+        <div class="contact-links">
+          <a href="mailto:aobadina6@gmail.com" class="contact-btn">
+            <span class="mono">✉</span> aobadina6@gmail.com
+          </a>
+          <a href="https://github.com/ayo-d09" target="_blank" class="contact-btn outline">
+            <span class="mono">↗</span> github.com/ayo-d09
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="mono">© 2025 Ayomide Obadina — Built with precision.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
