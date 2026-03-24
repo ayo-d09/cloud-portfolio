@@ -2,9 +2,11 @@ provider "aws" {
   region = var.region
 }
 
+
 resource "aws_s3_bucket" "portfolio" {
   bucket = var.bucket_name
 }
+
 
 resource "aws_s3_bucket_public_access_block" "block" {
   bucket = aws_s3_bucket.portfolio.id
@@ -15,6 +17,16 @@ resource "aws_s3_bucket_public_access_block" "block" {
   restrict_public_buckets = true
 }
 
+
+resource "aws_s3_bucket_ownership_controls" "ownership" {
+  bucket = aws_s3_bucket.portfolio.id
+
+  rule {
+    object_ownership = "BucketOwnerEnforced"
+  }
+}
+
+
 resource "aws_cloudfront_origin_access_control" "oac" {
   name                              = "portfolio-oac"
   description                       = "Access S3 securely"
@@ -22,6 +34,7 @@ resource "aws_cloudfront_origin_access_control" "oac" {
   signing_behavior                  = "always"
   signing_protocol                  = "sigv4"
 }
+
 
 resource "aws_cloudfront_distribution" "cdn" {
   enabled             = true
@@ -87,10 +100,36 @@ resource "aws_s3_bucket_policy" "policy" {
   })
 }
 
-resource "aws_s3_bucket_ownership_controls" "ownership" {
-  bucket = aws_s3_bucket.portfolio.id
 
-  rule {
-    object_ownership = "BucketOwnerEnforced"
+resource "aws_cloudwatch_metric_alarm" "cloudfront_4xx_errors" {
+  alarm_name          = "cloudfront-4xx-errors"
+  comparison_operator = "GreaterThanThreshold"
+  evaluation_periods  = 1
+  metric_name         = "4xxErrorRate"
+  namespace           = "AWS/CloudFront"
+  period              = 300
+  statistic           = "Average"
+  threshold           = 1
+
+  dimensions = {
+    DistributionId = aws_cloudfront_distribution.cdn.id
+    Region         = "Global"
   }
+
+  alarm_description = "Alert when CloudFront has high 4xx errors"
+  alarm_actions = [aws_sns_topic.alerts.arn]
 }
+
+resource "aws_sns_topic" "alerts" {
+  name = "cloudfront-alerts"
+}
+
+resource "aws_sns_topic_subscription" "email" {
+  topic_arn = aws_sns_topic.alerts.arn
+  protocol  = "email"
+  endpoint  = "obadina111@gmail.com"
+}
+
+
+
+
