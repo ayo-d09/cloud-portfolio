@@ -1,7 +1,3 @@
-// =============================================
-//   AYOMIDE OBADINA — script.js
-// =============================================
-
 document.addEventListener('DOMContentLoaded', () => {
 
   // ---- HAMBURGER MENU ----
@@ -46,12 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.14, rootMargin: '0px 0px -50px 0px' });
   document.querySelectorAll('.scroll-reveal').forEach(el => revealObs.observe(el));
-
-  // ---- PARALLAX HERO GRID ----
-  const grid = document.querySelector('.hero-grid-bg');
-  window.addEventListener('scroll', () => {
-    if (grid) grid.style.transform = 'translateY(' + (window.scrollY * 0.28) + 'px)';
-  });
+ 
 
   // ---- SMOOTH ANCHOR SCROLL ----
   document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -61,21 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ---- 3D TILT ON PROJECT CARDS ----
-  document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('mousemove', e => {
-      const r  = card.getBoundingClientRect();
-      const rx = ((e.clientY - r.top  - r.height / 2) / r.height) * -6;
-      const ry = ((e.clientX - r.left - r.width  / 2) / r.width)  *  6;
-      card.style.transition = 'transform 0.1s ease, border-color 0.3s, box-shadow 0.3s';
-      card.style.transform  = 'perspective(800px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) translateY(-4px)';
-    });
-    card.addEventListener('mouseleave', () => {
-      card.style.transition = 'transform 0.5s ease, border-color 0.3s, box-shadow 0.3s';
-      card.style.transform  = '';
-    });
-  });
-
+ 
   // ---- LIGHT / DARK MODE TOGGLE ----
   const themeBtn = document.getElementById('theme-toggle');
   const isInitiallyLight = window.matchMedia('(prefers-color-scheme: light)').matches;

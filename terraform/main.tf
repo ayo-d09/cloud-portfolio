@@ -117,7 +117,7 @@ resource "aws_cloudwatch_metric_alarm" "cloudfront_4xx_errors" {
   }
 
   alarm_description = "Alert when CloudFront has high 4xx errors"
-  alarm_actions = [aws_sns_topic.alerts.arn]
+  alarm_actions     = [aws_sns_topic.alerts.arn]
 }
 
 resource "aws_sns_topic" "alerts" {
@@ -131,5 +131,28 @@ resource "aws_sns_topic_subscription" "email" {
 }
 
 
+resource "aws_s3_object" "index" {
+  bucket       = aws_s3_bucket.portfolio.id
+  key          = "index.html"
+  source       = "${path.module}/../website/index.html"
+  content_type = "text/html"
+  etag         = filemd5("${path.module}/../website/index.html")
+}
+
+resource "aws_s3_object" "css" {
+  bucket       = aws_s3_bucket.portfolio.id
+  key          = "style.css"
+  source       = "${path.module}/../website/style.css"
+  content_type = "text/css"
+  etag         = filemd5("${path.module}/../website/style.css")
+}
+
+resource "aws_s3_object" "js" {
+  bucket       = aws_s3_bucket.portfolio.id
+  key          = "script.js"
+  source       = "${path.module}/../website/script.js"
+  content_type = "application/javascript"
+  etag         = filemd5("${path.module}/../website/script.js")
+}
 
 
