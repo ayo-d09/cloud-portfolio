@@ -92,7 +92,7 @@ CLOUDFRONT_URL=$(
     --output text
 )
 echo -e "${GREEN}=================================================${NC}"
-echo -e "${GREEN}   Deployment complete! 🚀                       ${NC}"
+echo -e "${GREEN}   Deployment complete!                          ${NC}"
 echo -e "${GREEN}=================================================${NC}"
 echo ""
 echo -e "  ${CYAN}Live URL:${NC} https://${CLOUDFRONT_URL}"
