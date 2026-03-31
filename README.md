@@ -6,7 +6,7 @@ A personal portfolio website hosted on AWS that showcases my projects, technical
 
 ## Demo
 
-[https://yourname.com](https://yourname.com)
+...link
 
 ---
 
