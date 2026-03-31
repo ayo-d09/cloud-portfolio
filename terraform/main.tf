@@ -154,5 +154,3 @@ resource "aws_s3_object" "js" {
   content_type = "application/javascript"
   etag         = filemd5("${path.module}/../website/script.js")
 }
-
-
