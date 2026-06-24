@@ -5,184 +5,215 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ayomide Obadina | Cloud Engineer</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <div class="noise"></div>
-
-
-  <!-- NAVBAR -->
+  <!-- NAV -->
   <nav id="navbar">
     <div class="nav-logo">AO<span class="dot">.</span></div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#certifications">Certifications</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="Ayomide_Obadina_main.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
     </ul>
     <div class="nav-right">
-      <button id="theme-toggle" aria-label="Switch to light mode">&#9790;</button>
+      <button id="theme-toggle" aria-label="Toggle theme">&#9790;</button>
       <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-
   <!-- HERO -->
   <header id="hero">
-    <div class="hero-grid-bg"></div>
     <div class="hero-content">
-    <p class="hero-tag mono reveal">&lt; Cloud / DevOps Engineer /&gt;</p>
-      <h1 class="reveal">Ayomide<br><span class="outline">Obadina</span></h1>
-      <p class="hero-sub reveal delay-1"><br>I build scalable infrastructure using AWS, Terraform, Linux, automation, and CI/CD pipelines.</p>
-      <a href="#projects" class="btn reveal delay-2">See my work <span class="arrow">&#8595;</span></a>
+      <p class="hero-tag mono">Cloud / DevOps Engineer</p>
+      <h1>Ayomide<br>Obadina</h1>
+      <p class="hero-sub">I build and automate cloud infrastructure on AWS — from static hosting and IaC to containerised deployments and CI/CD pipelines.</p>
+      <div class="hero-links">
+        <a href="#projects">See my work</a>
+        <a href="Ayomide_Obadina_main.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
+      </div>
     </div>
-    <div class="hero-badge reveal delay-2">
-      <span class="badge-dot"></span>
-      <span class="mono">Available</span>
-    </div>
-    <div class="scroll-line-wrap"><div class="scroll-line"></div></div>
   </header>
-
 
   <!-- ABOUT -->
   <section id="about">
     <div class="container">
-      <div class="about-text scroll-reveal">
-        <h2>Hey, I'm Ayomide &mdash;<br><span class="accent">I build cloud stuff.</span></h2>
-        <p>I focus on creating reliable cloud solutions using modern tools and best practices, with particular attention to automation, security, and cost efficiency. My curiosity has led me down a hands-on path where I have gained practical experience with AWS, Terraform, Linux, Bash, and Python. I enjoy turning complex infrastructure challenges into clean, repeatable, and efficient solutions.
-        Through my projects, I have built and deployed production-like environments, including hosting static websites in the cloud, provisioning infrastructure as code, and implementing automated CI/CD pipelines. I prioritize writing clear, maintainable configurations while ensuring systems are secure, observable, and optimized.
-        I am continuously learning and staying up to date with industry trends in cloud engineering and DevOps. I am driven by the goal of building reliable systems that help businesses operate efficiently and deliver seamless user experiences. </p>
+      <span class="section-label mono">About</span>
+      <div class="about-grid">
+        <div>
+          <p>AWS Certified Cloud Practitioner with hands-on experience designing, deploying, and automating cloud infrastructure through self-driven projects. I work across EC2, ECS Fargate, Terraform, Docker, Kubernetes, CI/CD pipelines, and monitoring with Prometheus and Grafana.</p>
+          <p>I'm comfortable in Linux environments, version control workflows, and cloud-native deployments. I focus on automation-first practices and building systems that are reliable, observable, and cost-efficient.</p>
+          <p>Currently pursuing the AWS Solutions Architect Associate certification. Open to entry-level Cloud / DevOps Engineer roles.</p>
+        </div>
+        <div class="about-links">
+          <a href="https://github.com/ayo-d09" target="_blank" rel="noopener noreferrer" class="mono">GitHub ↗</a>
+          <a href="https://linkedin.com/in/ayomide-obadina-35b09937b" target="_blank" rel="noopener noreferrer" class="mono">LinkedIn ↗</a>
+          <a href="https://ayomideobadina.dev" target="_blank" rel="noopener noreferrer" class="mono">Portfolio ↗</a>
+        </div>
       </div>
     </div>
   </section>
 
-
   <!-- PROJECTS -->
   <section id="projects">
     <div class="container">
-      <h2 class="section-title scroll-reveal">Things I've built</h2>
+      <span class="section-label mono">Projects</span>
       <div class="projects-grid">
-        <div class="project-card scroll-reveal">
-          <span class="project-num mono"></span>
+
+        <div class="project-card">
           <h3>Cloud Portfolio Website</h3>
-          <p>Deployed this site on AWS using S3 for static hosting and CloudFront as the CDN. Set up IAM roles and bucket policies from scratch.</p>
+          <p>Deployed this site on AWS using S3 for static hosting and CloudFront as the CDN. Configured IAM roles and bucket policies from scratch.</p>
           <div class="project-tags">
             <span class="tag mono">AWS S3</span>
             <span class="tag mono">CloudFront</span>
             <span class="tag mono">IAM</span>
           </div>
-          <a href="https://github.com/ayo-d09/cloud-portfolio" target="_blank" class="project-link mono">View on GitHub &#8594;</a>
+          <a href="https://github.com/ayo-d09/cloud-portfolio" target="_blank" rel="noopener noreferrer" class="project-link mono">GitHub ↗</a>
         </div>
-        <div class="project-card scroll-reveal delay-1">
-          <span class="project-num mono"></span>
-          <h3>AWS Automation and Monitoring</h3>
-          <p>Built monitoring pipelines with CloudWatch and Lambda. Wanted alerts that actually fire before things go down, not after.</p>
+
+        <div class="project-card">
+          <h3>AWS Auto-Remediation System</h3>
+          <p>Monitoring pipeline with CloudWatch and Lambda that detects and fixes EC2 issues automatically before they escalate.</p>
           <div class="project-tags">
             <span class="tag mono">CloudWatch</span>
             <span class="tag mono">Lambda</span>
             <span class="tag mono">Terraform</span>
+            <span class="tag mono">EC2</span>
           </div>
-          <a href="https://github.com/ayo-d09/aws-monitoring-auto_healing-system" target="_blank" class="project-link mono">View on GitHub &#8594;</a>
+          <a href="https://github.com/ayo-d09/aws-monitoring-auto_healing-system" target="_blank" rel="noopener noreferrer" class="project-link mono">GitHub ↗</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Finance Tracker</h3>
+          <p>Containerised Python API deployed on AWS ECS Fargate, provisioned with Terraform.</p>
+          <div class="project-tags">
+            <span class="tag mono">Python</span>
+            <span class="tag mono">ECS Fargate</span>
+            <span class="tag mono">Terraform</span>
+            <span class="tag mono">Docker</span>
+          </div>
+          <a href="https://github.com/ayo-d09/finance-tracker" target="_blank" rel="noopener noreferrer" class="project-link mono">GitHub ↗</a>
+        </div>
+
+        <div class="project-card">
+          <h3>ExRate Bot</h3>
+          <p>Live Telegram currency converter with Prometheus monitoring, Grafana dashboard, Docker Compose, and a full CI/CD pipeline.</p>
+          <div class="project-tags">
+            <span class="tag mono">Python</span>
+            <span class="tag mono">Docker</span>
+            <span class="tag mono">Prometheus</span>
+            <span class="tag mono">GitHub Actions</span>
+          </div>
+          <a href="https://github.com/ayo-d09" target="_blank" rel="noopener noreferrer" class="project-link mono">GitHub ↗</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Flask Fly.io Starter</h3>
+          <p>Production-ready template for deploying Flask apps with Gunicorn, Docker, and automated CI/CD via GitHub Actions.</p>
+          <div class="project-tags">
+            <span class="tag mono">Python/Flask</span>
+            <span class="tag mono">Docker</span>
+            <span class="tag mono">GitHub Actions</span>
+            <span class="tag mono">Fly.io</span>
+          </div>
+          <a href="https://github.com/ayo-d09/flask-fly.io-starter" target="_blank" rel="noopener noreferrer" class="project-link mono">GitHub ↗</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Server Health Check</h3>
+          <p>Lightweight Bash script to monitor Linux server health — CPU, memory, disk, load average, and top processes.</p>
+          <div class="project-tags">
+            <span class="tag mono">Bash</span>
+            <span class="tag mono">Linux</span>
+          </div>
+          <a href="https://github.com/ayo-d09" target="_blank" rel="noopener noreferrer" class="project-link mono">GitHub ↗</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <span class="section-label mono">Skills</span>
+      <div class="skills-grid">
+        <div class="skills-group">
+          <h4 class="mono">Linux & Scripting</h4>
+          <ul>
+            <li>Linux</li>
+            <li>Bash Scripting</li>
+            <li>Python</li>
+            <li>Git & GitHub</li>
+            <li>Networking</li>
+          </ul>
+        </div>
+        <div class="skills-group">
+          <h4 class="mono">Cloud & Infrastructure</h4>
+          <ul>
+            <li>AWS</li>
+            <li>Terraform</li>
+            <li>Ansible</li>
+            <li>Prometheus</li>
+            <li>Grafana</li>
+          </ul>
+        </div>
+        <div class="skills-group">
+          <h4 class="mono">Containers & CI/CD</h4>
+          <ul>
+            <li>Docker</li>
+            <li>Kubernetes</li>
+            <li>GitHub Actions</li>
+            <li>Jenkins</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-
-  <!-- SKILLS -->
-  <section id="skills">
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
     <div class="container">
-      <h2 class="section-title scroll-reveal">What I work with</h2>
-
-     <!-- LINUX & SCRIPTING -->
-  <div class="skills-category">
-    <div class="skills-cat-title">Linux & Scripting</div>
-    <ul class="skills-list">
-      <li><i class="devicon-linux-plain"></i> Linux</li>
-      <li><i class="devicon-bash-plain"></i> Bash Scripting</li>
-      <li><i class="devicon-python-plain colored"></i> Python</li>
-      <li><i class="devicon-git-plain colored"></i> Git</li>
-      <li><i class="devicon-github-original"></i> GitHub</li>
-      <li><i class="devicon-ssh-plain-wordmark"></i> Networking</li>
-    </ul>
-  </div>
- 
-  <!-- CLOUD & INFRASTRUCTURE -->
-  <div class="skills-category">
-    <div class="skills-cat-title">Cloud & Infrastructure</div>
-    <ul class="skills-list">
-      <li><i class="devicon-amazonwebservices-plain-wordmark colored"></i> AWS</li>
-      <li><i class="devicon-terraform-plain colored"></i> Terraform</li>
-    <li>
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="color:#EE0000; flex-shrink:0; width:18px;">
-    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2zm2.34 14.42L10.5 7.5l-.84 5.25-1.91-.34 1.34-8.41h1.88l4.5 10.5-1.13.92z"/>
-  </svg>
-  Ansible
-</li>
-      <li><i class="devicon-prometheus-plain colored"></i> Prometheus</li>
-      <li><i class="devicon-grafana-plain colored"></i> Grafana</li>
-    </ul>
-  </div>
-  
-  <!-- CONTAINERS & CI/CD -->
-  <div class="skills-category">
-    <div class="skills-cat-title">Containers & CI/CD</div>
-    <ul class="skills-list">
-      <li><i class="devicon-docker-plain colored"></i> Docker</li>
-      <li><i class="devicon-kubernetes-plain colored"></i> Kubernetes</li>
-      <li><i class="devicon-githubactions-plain colored"></i> GitHub Actions</li>
-      <li><i class="devicon-jenkins-plain colored"></i> Jenkins</li>
-    </ul>
-  </div>
-
+      <span class="section-label mono">Certifications</span>
+      <ul class="cert-list">
+        <li>
+          <span class="cert-name">AWS Certified Cloud Practitioner (CLF-C02)</span>
+          <span class="cert-status mono issued">Issued</span>
+        </li>
+        <li>
+          <span class="cert-name">AWS Certified Solutions Architect Associate (SAA-C03)</span>
+          <span class="cert-status mono ongoing">Ongoing</span>
+        </li>
+      </ul>
     </div>
   </section>
 
-
   <!-- CONTACT -->
   <section id="contact">
-    <div class="contact-links">
-
-  <!-- Gmail -->
-  <a href="mailto:aobadina6@gmail.com" class="contact-btn" aria-label="Send email">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-    </svg>
-  </a>
-
-  <!-- GitHub -->
-  <a href="https://github.com/ayo-d09" target="_blank" class="contact-btn" aria-label="GitHub profile">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577 0-.285-.01-1.044-.015-2.051-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.652 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.604-.015 2.896-.015 3.286 0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
-    </svg>
-  </a>
-
-  <!-- LinkedIn -->
-  <a href="https://linkedin.com/in/" target="_blank" class="contact-btn" aria-label="LinkedIn profile">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-    </svg>
-
-    <!-- Twitter / X -->
-  <a href="https://twitter.com/YOUR_USERNAME" target="_blank" class="contact-btn" aria-label="Twitter / X profile">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932L18.901 1.153zM17.61 20.644h2.039L6.486 3.24H4.298l13.312 17.404z"/>
-    </svg>
-  </a>
-
-  </a>
-</div>
-
+    <div class="container">
+      <span class="section-label mono">Contact</span>
+      <h2>Let's work together.</h2>
+      <p class="contact-sub">Open to entry-level Cloud / DevOps Engineer roles. Feel free to reach out.</p>
+      <div class="contact-links">
+        <a href="mailto:aobadina6@gmail.com" class="mono">aobadina6@gmail.com ↗</a>
+        <a href="https://github.com/ayo-d09" target="_blank" rel="noopener noreferrer" class="mono">GitHub ↗</a>
+        <a href="https://linkedin.com/in/ayomide-obadina-35b09937b" target="_blank" rel="noopener noreferrer" class="mono">LinkedIn ↗</a>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    <p class="mono">&#169; 2026. Ayomide Obadina. All rights reserved.</p>
+    <div class="container">
+      <p class="mono">© 2026 Ayomide Obadina</p>
+    </div>
   </footer>
 
-  
   <script src="script.js"></script>
 </body>
 </html>
