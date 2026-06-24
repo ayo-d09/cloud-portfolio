@@ -137,6 +137,7 @@ body.light .tag { background: rgba(0,153,187,0.08); border-color: rgba(0,153,187
 }
 .cert-list li:last-child { border-bottom: none; }
 .cert-name { font-size: 0.92rem; font-weight: 500; }
+a.cert-name:hover { color: var(--accent); }
 .cert-status { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; }
 .cert-status.issued { color: #22c55e; }
 .cert-status.ongoing { color: var(--accent); }
@@ -170,5 +171,5 @@ footer p { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.08em; }
   .nav-links.open { display: flex; }
   .nav-links li a { display: block; padding: 1rem 2rem; border-bottom: 1px solid var(--border); font-size: 0.85rem; }
   .skills-grid { grid-template-columns: 1fr; }
-  #hero { padding: 7rem 2rem 4rem; } 
+  #hero { padding: 7rem 2rem 4rem; }
 }
