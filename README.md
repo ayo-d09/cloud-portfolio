@@ -35,7 +35,7 @@ The portfolio is deployed using a secure, CDN-backed architecture designed for h
 
 **S3**: Stores static website files (HTML, CSS, JavaScript)
 **CloudFront**: Global CDN for fast delivery and HTTPS enforcement 
-**Route 53**:Ö DNS management for custom domain
+**Route 53**: DNS management for custom domain
 **ACM**: SSL/TLS certififcate provisioning 
 **IAM**: Secure access control (least privilege)
 **CloudWatch**: Monitoring and alerting 
@@ -79,16 +79,16 @@ cloud-portfolio/
 
 ### Prerequisites
 
-* AWS CLI configured (`aws configure`)
+* AWS CLI configured (using `aws configure`)
 * Terraform installed
-* An AWS account with appropriate permissions
+* An AWS account with the right permissions
 
 ---
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/cloud-portfolio.git
+git clone https://github.com/ayo-d09/cloud-portfolio.git
 cd cloud-portfolio
 ```
 
