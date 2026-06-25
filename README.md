@@ -179,7 +179,7 @@ Cloud & DevOps Engineer
 ## Contact
 
 * GitHub: https://github.com/ayo-d09
-* LinkedIn: 
+* LinkedIn: https://www.linkedin.com/in/ayomide-obadina-35b09937b?
 
 ---
 
