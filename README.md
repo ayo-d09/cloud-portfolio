@@ -1,6 +1,6 @@
 
 
-A personal portfolio website hosted on AWS that showcases my projects, technical skills, About Me section, and Contact page through a secure, scalable, and fully cloud-native deployment.
+A personal portfolio website hosted on AWS that showcases my projects, resume, technical skills, about me section, and contact page through a secure, scalable, and fully cloud-native deployment.
 
 ---
 
@@ -16,11 +16,11 @@ The portfolio is deployed using a secure, CDN-backed architecture designed for h
 
 ```
                         ┌─────────────┐
-                        │   Route 53  │  - DNS Management
+                        │ Cloudflare  │  - DNS Management
                         └──────┬──────┘
                                │
                         ┌──────v──────┐
-                        │ CloudFront  │  - CDN / HTTPS / Caching
+                        │ CloudFront  │  - CDN / HTTPS 
                         └──────┬──────┘
                                │
                         ┌──────v──────┐
@@ -35,10 +35,11 @@ The portfolio is deployed using a secure, CDN-backed architecture designed for h
 
 **S3**: Stores static website files (HTML, CSS, JavaScript)
 **CloudFront**: Global CDN for fast delivery and HTTPS enforcement 
-**Route 53**: DNS management for custom domain
 **ACM**: SSL/TLS certififcate provisioning 
 **IAM**: Secure access control (least privilege)
 **CloudWatch**: Monitoring and alerting 
+
+**Cloudflare** instead of Route 53 for DNS 
 
 
 ## Features
@@ -135,7 +136,7 @@ This uploads your website files to S3 and updates the live site.
 * Access is restricted using **CloudFront Origin Access Control (OAC)**
 * IAM follows the **principle of least privilege**
 * HTTPS enforced via CloudFront
-* Sensitive configurations are not hardcoded
+* Sensitive configurations are not **hardcoded**
 
 ---
 
@@ -159,13 +160,13 @@ CloudWatch is used for:
 
 ---
 
-## Future Improvements
+##  Possible Future Improvements
 
-* [ ] Add CI/CD pipeline (GitHub Actions)
-* [ ] Configure custom domain with Route 53
-* [ ] Enable access logging (S3 + CloudFront)
-* [ ] Improve frontend UI/UX
-* [ ] Add backend features (API Gateway + Lambda)
+* Add CI/CD pipeline (GitHub Actions)
+* Configure custom domain with Route 53
+* Enable access logging (S3 + CloudFront)
+* Improve frontend UI/UX
+* Add backend features (API Gateway + Lambda)
 
 ---
 
@@ -180,7 +181,7 @@ Cloud & DevOps Engineer
 
 * GitHub: https://github.com/ayo-d09
 * LinkedIn: https://www.linkedin.com/in/ayomide-obadina-35b09937b?
-
+* X: https://x.com/ayobuilds?s=11
 ---
 
 ## License
