@@ -6,7 +6,7 @@ A personal portfolio website hosted on AWS that showcases my projects, resume, t
 
 ## Demo
 
-...link
+ayomideobadina.com
 
 ---
 
