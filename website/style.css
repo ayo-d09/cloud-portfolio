@@ -135,7 +135,7 @@ a.cert-name:hover { color: var(--accent); }
 /* ---- CONTACT ---- */
 #contact h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.8rem; }
 .contact-sub { color: var(--muted); font-size: 0.95rem; line-height: 1.75; margin-bottom: 2rem; }
-.contact-links { display: flex; flex-direction: column; gap: 0.8rem; }
+.contact-links { display: flex; flex-direction: column; gap: 2rem; flex-wrap: wrap; }
 .contact-links a { font-size: 0.82rem; color: var(--accent); letter-spacing: 0.06em; text-decoration: underline; text-underline-offset: 4px; }
 .contact-links a:hover { opacity: 0.75; }
 
