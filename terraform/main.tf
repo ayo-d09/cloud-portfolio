@@ -1,7 +1,14 @@
 provider "aws" {
-  region = var.region
+  alias  = "us-east-1"
+  region = "us-east-1"
 }
 
+data "aws_acm_certificate" "portfolio" {
+  provider    = aws.us-east-1
+  domain      = "ayomideobadina.com"
+  statuses    = ["ISSUED"]
+  most_recent = true
+}
 
 resource "aws_s3_bucket" "portfolio" {
   bucket = var.bucket_name
@@ -39,18 +46,17 @@ resource "aws_cloudfront_origin_access_control" "oac" {
 resource "aws_cloudfront_distribution" "cdn" {
   enabled             = true
   default_root_object = "index.html"
-
+  aliases             = ["ayomideobadina.com", "www.ayomideobadina.com"]
   origin {
     domain_name = aws_s3_bucket.portfolio.bucket_regional_domain_name
     origin_id   = "s3-origin"
-
+    origin_path = "/website"
     origin_access_control_id = aws_cloudfront_origin_access_control.oac.id
   }
 
   default_cache_behavior {
     target_origin_id       = "s3-origin"
     viewer_protocol_policy = "redirect-to-https"
-
     allowed_methods = ["GET", "HEAD"]
     cached_methods  = ["GET", "HEAD"]
 
@@ -62,10 +68,11 @@ resource "aws_cloudfront_distribution" "cdn" {
     }
   }
 
-  viewer_certificate {
-    cloudfront_default_certificate = true
+viewer_certificate {
+    acm_certificate_arn      = data.aws_acm_certificate.portfolio.arn
+    ssl_support_method       = "sni-only"
+    minimum_protocol_version = "TLSv1.2_2021"
   }
-
   restrictions {
     geo_restriction {
       restriction_type = "none"
@@ -128,29 +135,4 @@ resource "aws_sns_topic_subscription" "email" {
   topic_arn = aws_sns_topic.alerts.arn
   protocol  = "email"
   endpoint  = "obadina111@gmail.com"
-}
-
-
-resource "aws_s3_object" "index" {
-  bucket       = aws_s3_bucket.portfolio.id
-  key          = "index.html"
-  source       = "${path.module}/../website/index.html"
-  content_type = "text/html"
-  etag         = filemd5("${path.module}/../website/index.html")
-}
-
-resource "aws_s3_object" "css" {
-  bucket       = aws_s3_bucket.portfolio.id
-  key          = "style.css"
-  source       = "${path.module}/../website/style.css"
-  content_type = "text/css"
-  etag         = filemd5("${path.module}/../website/style.css")
-}
-
-resource "aws_s3_object" "js" {
-  bucket       = aws_s3_bucket.portfolio.id
-  key          = "script.js"
-  source       = "${path.module}/../website/script.js"
-  content_type = "application/javascript"
-  etag         = filemd5("${path.module}/../website/script.js")
 }
