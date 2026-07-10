@@ -50,7 +50,6 @@ resource "aws_cloudfront_distribution" "cdn" {
   origin {
     domain_name = aws_s3_bucket.portfolio.bucket_regional_domain_name
     origin_id   = "s3-origin"
-    origin_path = "/website"
     origin_access_control_id = aws_cloudfront_origin_access_control.oac.id
   }
 
