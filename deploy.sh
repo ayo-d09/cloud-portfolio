@@ -25,6 +25,11 @@ cd -
 # Upload files to S3
 aws s3 sync "$WEBSITE_DIR" "s3://$BUCKET_NAME" --delete --exclude "*.DS_Store"
 
+aws s3api head-object \
+  --bucket "$BUCKET_NAME" \
+  --key index.html >/dev/null
+
+echo "✓ index.html uploaded successfully"
 # Force fresh index.html on every request
 aws s3 cp "$WEBSITE_DIR/index.html" "s3://$BUCKET_NAME/index.html" \
   --content-type "text/html" \
