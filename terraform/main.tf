@@ -113,9 +113,9 @@ resource "aws_cloudwatch_metric_alarm" "cloudfront_4xx_errors" {
   evaluation_periods  = 1
   metric_name         = "4xxErrorRate"
   namespace           = "AWS/CloudFront"
-  period              = 300
+  period              = 3600
   statistic           = "Average"
-  threshold           = 1
+  threshold           = 50
 
   dimensions = {
     DistributionId = aws_cloudfront_distribution.cdn.id
