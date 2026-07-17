@@ -20,10 +20,12 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
-      - name: Upload to S3
+      - name: Upload website to S3
         run: |
-          aws s3 sync . s3://ayo-portfolio-site-12345 --delete
-
+          aws s3 sync ./website/ s3://ayo-portfolio-site-12345 \
+            --delete \
+            --exclude "*.DS_Store"
+            
       - name: Invalidate CloudFront cache
         run: |
           aws cloudfront create-invalidation \
