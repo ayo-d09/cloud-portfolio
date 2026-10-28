@@ -1,5 +1,4 @@
 
-
 A personal portfolio website hosted on AWS that showcases my projects, resume, technical skills, about me section, and contact page through a secure, scalable, and fully cloud-native deployment.
 
 ---
@@ -11,7 +10,6 @@ https://ayomideobadina.com
 ---
 
 ## Architecture
-
 The portfolio is deployed using a secure, CDN-backed architecture designed for high availability, low latency, and best-practice cloud security.
 
 ```
